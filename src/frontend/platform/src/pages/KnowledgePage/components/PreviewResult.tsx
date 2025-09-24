@@ -206,7 +206,7 @@ console.log(showPreview, previewCount, rules, step, applyEachCell, cellGeneralCo
                 fileSuffix={currentFile?.suffix}
                 previewCount={previewCount}
                 className="h-[calc(100vh-284px)]"
-                edit={step === 3 || step === 2}
+                edit={step === 3 || step === 2&&!showPreview}
                 loading={loading}
                 chunks={chunks}
                 onDel={handleDelete}
