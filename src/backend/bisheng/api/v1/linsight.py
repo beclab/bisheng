@@ -720,7 +720,8 @@ async def remove_sop(
 
 
 class IntegratedExecuteRequestBody(BaseModel):
-    query: str = Body(..., description="用户提交的问题")
+    query: Optional[str] = Body(None, description="用户提交的问题")
+    sop_content: Optional[str] = Body(None, description="用户提交的SOP内容")
     tool_ids: List[int] = Body(None, description="选择的工具ID列表")
     org_knowledge_enabled: bool = Body(False, description="是否启用组织知识库")
     personal_knowledge_enabled: bool = Body(False, description="是否启用个人知识库")
