@@ -1,10 +1,11 @@
 name: publish bisheng-backend to Dockerhub
 
+
 on:
-  push:
-    # Sequence of patterns matched against refs/tags
-    tags:
-      - "v*"
+  workflow_dispatch:
+    inputs:
+      tags:
+        description: 'Release Tags'
 
 
 jobs:
