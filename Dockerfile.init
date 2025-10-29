@@ -1,0 +1,9 @@
+FROM alpine:3.19
+
+RUN apk add --no-cache rsync
+
+COPY docker/ /docker/
+
+WORKDIR /docker
+
+CMD ["sh"]
